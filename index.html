@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Mobile Detective</title>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
+  </head>
+
+  <body>
+    <div class="grid h-screen place-items-center w-fit py-10">
+      <div
+        class="max-w-2xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+      >
+        <img class="rounded-t-lg" src="Picsart.jpg" alt="" />
+
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white p-5"
+        >
+          LOSTMOBILESFINDER
+        </h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 px-5">
+          If your mobile is lost, stolen or snatched by someone then you fill
+          this form. Our team will contact you soon. Note: After getting mobile
+          tracked, you will have to pay a tracking charge of 25% of the mobile
+          price.
+        </p>
+
+        <div
+          class="p-6 max-w-2xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 content-center"
+        >
+          <form id="signupForm" name="google-sheet" class="w-full max-w-2xl">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Full Name <span class="text-red-600 text-lg">*</span>
+                </label>
+                <input
+                  required
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="Full Name"
+                  id="full_name"
+                  type="text"
+                  placeholder="Enter Your Name"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Contact number <span class="text-red-600 text-lg">*</span>
+                </label>
+                <input
+                  required
+                  name="Contact number"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  id="contact_number"
+                  type="number"
+                  placeholder="Mobile Number"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                  >Your Insta ID
+                  <!--  <span class="text-red-600 text-lg">*</span> -->
+                </label>
+                <input
+                  name="Your Insta Id"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  id="insta_Id"
+                  type="text"
+                  placeholder="Your Insta ID"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Mobile name <span class="text-red-600 text-lg">*</span>(Mobile
+                  Model)
+                </label>
+                <input
+                  name="Mobile name"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  id="mobile_name"
+                  required
+                  type="text"
+                  placeholder="Enter Mobile Name"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  IMEI no 1 <span class="text-red-600 text-lg">*</span>
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="IMEI no 1"
+                  id="imei_no_1"
+                  required
+                  type="number"
+                  placeholder="Enter IMEI No-1"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  IMEI no 2 <span class="text-red-600 text-lg">*</span>
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="IMEI no 2"
+                  id="imei_no_2"
+                  required
+                  type="number"
+                  placeholder="Enter IMEI No-2"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Used Mobile numbers before Lost sim1
+                  <span class="text-red-600 text-lg">*</span>
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="Used Mobile numbers before Lost sim1"
+                  id="Used_Mobile_numbers_before_Lost_sim1"
+                  required
+                  type="number"
+                  placeholder="Used Mobile numbers before Lost sim1"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Used Mobile numbers before Lost sim2
+                  <span class="text-red-600 text-lg"></span>
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="Used Mobile numbers before Lost sim2"
+                  id="Used_Mobile_numbers_before_Lost_sim2"
+                  required
+                  type="empty"
+                  placeholder="Used Mobile numbers before Lost sim2"
+                />
+              </div>
+            </div>
+
+            <div class="relative">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-first-name"
+              >
+                Mobile Lost Date <span class="text-red-600 text-lg">*</span>
+              </label>
+              <input
+                datepicker
+                datepicker-autohide
+                type="text"
+                id="mobile_lost_date"
+                required
+                name="Mobile Lost Date"
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                placeholder="Select date"
+              />
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  lost time <span class="text-red-600 text-lg"></span>
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="lost time"
+                  id="lost_time"
+                  required
+                  type="time"
+                  placeholder="lost time"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Mobile Lost Address
+                  <span class="text-red-600 text-lg">*</span></label
+                >
+                <textarea
+                  id="mobile_lost_address"
+                  rows="4"
+                  required
+                  name="Mobile Lost Address"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  placeholder="Address Details..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Mobile price <span class="text-red-600 text-lg">*</span>(INR)
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  name="Mobile price"
+                  id="mobile_price"
+                  required
+                  type="number"
+                  placeholder="Enter Mobile Price"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  How was the mobile stolen?
+                  <span class="text-red-600 text-lg">*</span></label
+                >
+                <textarea
+                  id="how_mobile_stolen"
+                  rows="4"
+                  required
+                  name="How was the mobile stolen"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  placeholder="Explain in detail"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  tracking charges applicable minimum (25%)?
+                  <span class="text-red-600 text-lg">*</span></label
+                >
+                <div class="flex">
+                  <div class="flex items-left mr-4">
+                    <input
+                      type="radio"
+                      value="25% price of mobile"
+                      name="gift"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="inline-radio"
+                      class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >20% Price of Mobile</label
+                    >
+                  </div>
+                  <div class="flex items-left mr-4">
+                    <input
+                      type="radio"
+                      value="30% price of mobile"
+                      name="gift"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="inline-2-radio"
+                      class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >25% Price of Mobile</label
+                    >
+                  </div>
+                  <div class="flex items-left mr-4">
+                    <input
+                      checked
+                      id="inline-checked-radio"
+                      type="radio"
+                      value="40% price of mobile"
+                      name="gift"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="inline-checked-radio"
+                      class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >35% Price of Mobile</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Proof Requirements ( Important)
+                  <span class="text-red-600 text-lg">*</span>
+                </label>
+                <div class="flex">
+                  <div class="flex items-center mr-4">
+                    <input
+                      id="inline-checkbox"
+                      type="checkbox"
+                      value="Mobile bill"
+                      name="bill"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="inline-checkbox"
+                      class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >Mobile bill</label
+                    >
+                  </div>
+                  <div class="flex items-center mr-4">
+                    <input
+                      id="inline-2-checkbox"
+                      type="checkbox"
+                      value="Mobile Box"
+                      name="box"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="inline-2-checkbox"
+                      class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >Mobile Box</label
+                    >
+                  </div>
+                  <div class="flex items-center mr-4">
+                    <input
+                      checked=""
+                      id="inline-checked-checkbox"
+                      type="checkbox"
+                      value="F.I.R copy"
+                      name="fir"
+                      class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    />
+                    <label
+                      for="inline-checked-checkbox"
+                      class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                      >F.I.R copy</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="hidden" value="" id="mobile_proof" name="Proof" />
+            <input
+              type="hidden"
+              value=""
+              id="mobile_gift"
+              name="How much gift"
+            />
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3 mb-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="grid-first-name"
+                >
+                  Do you agree to have your mobile traced?
+                  <span class="text-red-600 text-lg">*</span></label
+                >
+                <div class="flex items-center">
+                  <input
+                    id="agree-checkbox"
+                    type="checkbox"
+                    value=""
+                    onclick="getValue()"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label
+                    for="link-checkbox"
+                    class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Yes , I am agree.</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start mb-6">
+              <button
+                type="submit"
+                name="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="flex flex-nowrap my-5 pb-10">
+        <span
+          >After entering all the details you will be redirected to my whats app
+          at there send the images of bill and box
+        </span>
+        <br />
+        <span>&nbsp;. </span>
+        <span> </span>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function getValue() {
+        var gift = $("input[type='radio'][name='gift']:checked").val();
+        $("#mobile_gift").val(gift);
+
+        var proof = [];
+
+        var proof_bill = $("input[type='checkbox'][name='bill']:checked").val();
+        var proof_box = $("input[type='checkbox'][name='box']:checked").val();
+        var proof_fir = $("input[type='checkbox'][name='fir']:checked").val();
+
+        proof.push(proof_bill);
+        proof.push(proof_box);
+        proof.push(proof_fir);
+
+        $("#mobile_proof").val(proof);
+      }
+
+      function gotowhatsapp() {
+        console.log("Send to whatsapp");
+
+        var gift = $("input[type='radio'][name='gift']:checked").val();
+
+        var proof = [];
+
+        var proof_bill = $("input[type='checkbox'][name='bill']:checked").val();
+        var proof_box = $("input[type='checkbox'][name='box']:checked").val();
+        var proof_fir = $("input[type='checkbox'][name='fir']:checked").val();
+
+        proof.push(proof_bill);
+        proof.push(proof_box);
+        proof.push(proof_fir);
+
+        $("#mobile_proof").val(proof);
+
+        var full_name = document.getElementById("full_name").value;
+        var contact_number = document.getElementById("contact_number").value;
+        var mobile_name = document.getElementById("mobile_name").value;
+        var imei_no_1 = document.getElementById("imei_no_1").value;
+        var imei_no_2 = document.getElementById("imei_no_2").value;
+        var Used_Mobile_numbers_before_Lost_sim1 = document.getElementById(
+          "Used_Mobile_numbers_before_Lost_sim1"
+        ).value;
+        var Used_Mobile_numbers_before_Lost_sim2 = document.getElementById(
+          "Used_Mobile_numbers_before_Lost_sim2"
+        ).value;
+        var mobile_lost_date =
+          document.getElementById("mobile_lost_date").value;
+        var lost_time = document.getElementById("lost_time").value;
+        var mobile_lost_address = document.getElementById(
+          "mobile_lost_address"
+        ).value;
+        var mobile_price = document.getElementById("mobile_price").value;
+        var how_mobile_stolen =
+          document.getElementById("how_mobile_stolen").value;
+
+        var url =
+          "https://wa.me/7569727515?text=" +
+          "*Full Name*: " +
+          full_name +
+          "%0a" +
+          "*Contact Number*: " +
+          contact_number +
+          "%0a" +
+          "*Your Instagram Id*: " +
+          insta_Id +
+          "%0a" +
+          "*Mobile Name*: " +
+          mobile_name +
+          "%0a" +
+          "*First IMEI No*: " +
+          imei_no_1 +
+          "%0a" +
+          "*Second IMEI No*: " +
+          imei_no_2 +
+          "%0a" +
+          "*Used Mobile numbers before Lost sim1*: " +
+          Used_Mobile_numbers_before_Lost_sim1 +
+          "%0a" +
+          "*Used Mobile numbers before Lost sim2*: " +
+          Used_Mobile_numbers_before_Lost_sim2 +
+          "%0a" +
+          "*Mobile Lost Date*: " +
+          mobile_lost_date +
+          "%0a" +
+          "*lost time*: " +
+          lost_time +
+          "%0a" +
+          "*Mobile Lost Address*: " +
+          mobile_lost_address +
+          "%0a" +
+          "*Mobile Price*: " +
+          mobile_price +
+          "%0a" +
+          "*How was mobile stolen*: " +
+          how_mobile_stolen +
+          "%0a" +
+          "*Tracking Charges*: " +
+          gift +
+          "%0a" +
+          "*Proof*: " +
+          proof;
+
+        window.open(url, "_blank");
+      }
+    </script>
+
+    <script>
+      const scriptURL = "https://script.google";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) =>
+            alert("Thanks for Contacting us..! We Will Contact You Soon...")
+          )
+          .catch((error) => console.error("Error!", error.message));
+        gotowhatsapp();
+      });
+    </script>
+  </body>
+</html>
