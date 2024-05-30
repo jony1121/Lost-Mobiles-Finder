@@ -4,24 +4,20 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <!-- Tailwind CSS -->
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-
     <title>Mobile Detective</title>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/datepicker.js"></script>
   </head>
-
   <body>
     <div class="grid h-screen place-items-center w-fit py-10">
       <div
         class="max-w-2xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
       >
         <img class="rounded-t-lg" src="Picsart.jpg" alt="" />
-
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white p-5"
         >
@@ -33,7 +29,6 @@
           tracked, you will have to pay a tracking charge of 25% of the mobile
           price.
         </p>
-
         <div
           class="p-6 max-w-2xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 content-center"
         >
@@ -56,7 +51,6 @@
                 />
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -75,25 +69,6 @@
                 />
               </div>
             </div>
-
-            <div class="flex flex-wrap -mx-3 mb-6">
-              <div class="w-full px-3 mb-6 md:mb-0">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-first-name"
-                  >Your Insta ID
-                  <!--  <span class="text-red-600 text-lg">*</span> -->
-                </label>
-                <input
-                  name="Your Insta Id"
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-grey-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="insta_Id"
-                  type="text"
-                  placeholder="Your Insta ID"
-                />
-              </div>
-            </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -113,7 +88,6 @@
                 />
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -132,7 +106,6 @@
                 />
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -151,7 +124,6 @@
                 />
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -171,7 +143,6 @@
                 />
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -191,7 +162,6 @@
                 />
               </div>
             </div>
-
             <div class="relative">
               <label
                 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -210,7 +180,6 @@
                 placeholder="Select date"
               />
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -229,7 +198,6 @@
                 />
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -249,7 +217,6 @@
                 ></textarea>
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -268,7 +235,6 @@
                 />
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -288,7 +254,6 @@
                 ></textarea>
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -343,7 +308,6 @@
                 </div>
               </div>
             </div>
-
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label
@@ -450,52 +414,38 @@
           at there send the images of bill and box
         </span>
         <br />
-        <span>&nbsp;. </span>
-        <span> </span>
+        <span>&nbsp;. </span> <span> </span>
       </div>
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
-
     <script>
       function getValue() {
         var gift = $("input[type='radio'][name='gift']:checked").val();
         $("#mobile_gift").val(gift);
-
         var proof = [];
-
         var proof_bill = $("input[type='checkbox'][name='bill']:checked").val();
         var proof_box = $("input[type='checkbox'][name='box']:checked").val();
         var proof_fir = $("input[type='checkbox'][name='fir']:checked").val();
-
         proof.push(proof_bill);
         proof.push(proof_box);
         proof.push(proof_fir);
-
         $("#mobile_proof").val(proof);
       }
-
       function gotowhatsapp() {
         console.log("Send to whatsapp");
-
         var gift = $("input[type='radio'][name='gift']:checked").val();
-
         var proof = [];
-
         var proof_bill = $("input[type='checkbox'][name='bill']:checked").val();
         var proof_box = $("input[type='checkbox'][name='box']:checked").val();
         var proof_fir = $("input[type='checkbox'][name='fir']:checked").val();
-
         proof.push(proof_bill);
         proof.push(proof_box);
         proof.push(proof_fir);
-
         $("#mobile_proof").val(proof);
-
         var full_name = document.getElementById("full_name").value;
         var contact_number = document.getElementById("contact_number").value;
         var mobile_name = document.getElementById("mobile_name").value;
@@ -516,7 +466,6 @@
         var mobile_price = document.getElementById("mobile_price").value;
         var how_mobile_stolen =
           document.getElementById("how_mobile_stolen").value;
-
         var url =
           "https://wa.me/7569727515?text=" +
           "*Full Name*: " +
@@ -524,9 +473,6 @@
           "%0a" +
           "*Contact Number*: " +
           contact_number +
-          "%0a" +
-          "*Your Instagram Id*: " +
-          insta_Id +
           "%0a" +
           "*Mobile Name*: " +
           mobile_name +
@@ -563,15 +509,12 @@
           "%0a" +
           "*Proof*: " +
           proof;
-
         window.open(url, "_blank");
       }
     </script>
-
     <script>
       const scriptURL = "https://script.google";
       const form = document.forms["google-sheet"];
-
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
